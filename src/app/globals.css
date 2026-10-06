@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  /* backgrounds */
+  --bg: #0D1117;
+  --surface: #161B22;
+  --surface-2: #21262D;
+  --surface-3: #2d333b;
+  --border: #30363D;
+
+  /* text */
+  --text-bright: #F0F6FC;
+  --text: #E6EDF3;
+  --text-body: #C9D1D9;
+  --text-muted: #8B949E;
+
+  /* accents */
+  --accent: #FF8800;
+  --accent-soft: #FFA657;
+  --coral: #FF7B72;
+  --link: #58A6FF;
+  --link-light: #79C0FF;
+  --purple: #D2A8FF;
+
+  /* status */
+  --success: #3FB950;
+  --success-dark: #238636;
+  --danger: #F85149;
+  --danger-dark: #DA3633;
+}
+
+@theme {
+  --color-bg: #0D1117;
+  --color-surface: #161B22;
+  --color-surface-2: #21262D;
+  --color-surface-3: #2d333b;
+  --color-border: #30363D;
+
+  --color-text-bright: #F0F6FC;
+  --color-text-main: #E6EDF3;
+  --color-text-body: #C9D1D9;
+  --color-text-muted: #8B949E;
+
+  --color-accent: #FF8800;
+  --color-accent-soft: #FFA657;
+  --color-coral: #FF7B72;
+  --color-link: #58A6FF;
+  --color-link-light: #79C0FF;
+  --color-purple: #D2A8FF;
+
+  --color-success: #3FB950;
+  --color-success-dark: #238636;
+  --color-danger: #F85149;
+  --color-danger-dark: #DA3633;
+
+  --font-sans: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0D1117;
+  color: #C9D1D9;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom sleek scrollbar for GitHub dark aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8800;
+}
+
+/* Glowing accent effects */
+.glow-accent {
+  box-shadow: 0 0 25px -5px rgba(255, 136, 0, 0.35);
+}
+
+.glow-accent-sm {
+  box-shadow: 0 0 15px -3px rgba(255, 136, 0, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px -5px rgba(88, 166, 255, 0.3);
+}
+
+/* Terminal & Card borders with subtle gradients */
+.border-gradient-orange {
+  border-image: linear-gradient(to right, #FF8800, #30363D) 1;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
